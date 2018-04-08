@@ -18,10 +18,10 @@ pipeline {
           }
         }
 
-        stage('deploy') {
+        stage('install') {
           steps {
               withMaven(maven : 'maven') {
-              sh 'mvn -f pets deploy'
+              sh 'mvn -f pets install'
               }
           }
         }
